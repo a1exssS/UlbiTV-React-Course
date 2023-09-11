@@ -7,8 +7,19 @@
 	font: var(--font-m);
 
 	background-color: var(--bg-color);
+	transition: background-color .1s ease-in-out;
 	color: var(--primary-color);
-
 	min-height: 100vh;
+
+}
+
+.page-wrapper {
+	flex-grow: 1;
+	padding-top: 5px;
+	padding: 5px 10px;
+}
+
+.content-page {
+	display: flex;
 
 }

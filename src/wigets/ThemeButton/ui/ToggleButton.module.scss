@@ -1,8 +1,8 @@
 .ToggleButton {
-	// padding: 10px;
 	border-radius: 5px;
 	background-color: var(--inverted-bg-color);
 	color: var(--inverted-primary-color);
 	height: min-content;
+	transition: background-color .1s ease-in-out;
 
 }
