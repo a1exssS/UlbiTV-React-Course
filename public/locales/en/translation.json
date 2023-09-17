@@ -3,5 +3,8 @@
 	"Перевод": "Translate",
 	"Главная страница": "Home page",
 	"Открыть": "Open",
-	"Закрыть": "Close"
+	"Закрыть": "Close",
+	"Страница не найдена": "Page is not found",
+	"Обновить страницу": "Reload the Page",
+	"Что то пошло не так...": "Something went wrong..."
 }
