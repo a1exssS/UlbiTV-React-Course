@@ -3,14 +3,16 @@
 @import "./themes/dark.scss";
 @import "./themes/light.scss";
 
-.app {
+body {
 	font: var(--font-m);
+	color: var(--primary-color);
 
+}
+
+.app {
 	background-color: var(--bg-color);
 	transition: background-color .1s ease-in-out;
-	color: var(--primary-color);
 	min-height: 100vh;
-
 }
 
 .page-wrapper {
