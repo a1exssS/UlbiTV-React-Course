@@ -6,7 +6,8 @@
 	"scripts": {
 		"start": "webpack serve --env port=3000",
 		"build": "webpack --env mode=production",
-		"dev": "webpack --env mode=development"
+		"dev": "webpack --env mode=development",
+		"start:dev:server": "node ./json-server/index.js"
 	},
 	"keywords": [],
 	"author": "",
@@ -36,6 +37,7 @@
 		"eslint-plugin-react": "^7.33.2",
 		"file-loader": "^6.2.0",
 		"html-webpack-plugin": "^5.5.3",
+		"json-server": "^0.17.4",
 		"mini-css-extract-plugin": "^2.7.6",
 		"react-refresh": "^0.14.0",
 		"react-refresh-webpack-plugin": "^0.1.0",
@@ -55,6 +57,7 @@
 		"i18next": "^23.5.1",
 		"i18next-browser-languagedetector": "^7.1.0",
 		"i18next-http-backend": "^2.2.2",
+		"jsonwebtoken": "^9.0.2",
 		"react": "^18.2.0",
 		"react-dom": "^18.2.0",
 		"react-i18next": "^13.2.2",
