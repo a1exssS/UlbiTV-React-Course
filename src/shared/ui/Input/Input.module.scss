@@ -1,0 +1,47 @@
+.input {
+	padding: 5px 0;
+	border-radius: 5px;
+	background-color: transparent;
+	width: 100%;
+	color: transparent;
+	text-shadow: 0 0 0 var(--primary-color);
+}
+
+.placeholder {
+	margin-right: 5px;
+}
+
+.InputBoxWrapper {
+	display: flex;
+	align-items: center;
+}
+
+.inputChariot {
+	position: absolute;
+	width: 9px;
+	height: 3px;
+	background-color: var(--primary-color);
+	bottom: 0;
+	left: 0;
+
+	animation: blink .6s forwards infinite;
+}
+
+.inputWrapper {
+	flex-grow: 1;
+	position: relative;
+}
+
+@keyframes blink {
+	0% {
+		opacity: 0;
+	}
+
+	50% {
+		opacity: .01;
+	}
+
+	100% {
+		opacity: 1;
+	}
+}

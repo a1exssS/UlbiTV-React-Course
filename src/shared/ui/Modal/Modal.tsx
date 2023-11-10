@@ -9,13 +9,16 @@ type Modal = {
 	children?: ReactNode;
 	isOpen?: boolean,
 	onClose?: () => void
+	lazy?: boolean
 
 };
 
 const ANIMATION_DELAY = 200
 
-export function Modal({ className, children, isOpen, onClose }: Modal) {
+export function Modal({ className, children, isOpen, onClose, lazy }: Modal) {
 	const [isClosing, setIsClosing] = useState(false)
+	const [isMounted, setIsMounted] = useState(false)
+
 	const timerRef = useRef<ReturnType<typeof setTimeout>>()
 	const { theme } = useTheme()
 
@@ -24,6 +27,13 @@ export function Modal({ className, children, isOpen, onClose }: Modal) {
 		[classes.isClosing]: isClosing,
 		[classes[theme]]: true,
 	}
+
+	useEffect(() => {
+		if (isOpen) {
+			setIsMounted(true)
+		}
+	}, [isOpen])
+
 
 
 	const closeHandler = useCallback(() => {
@@ -58,6 +68,9 @@ export function Modal({ className, children, isOpen, onClose }: Modal) {
 
 	}
 
+	if (lazy && !isMounted) {
+		return null
+	}
 
 	return (
 		<Portal>
