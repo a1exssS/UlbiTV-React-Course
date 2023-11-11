@@ -34,14 +34,12 @@ export function Modal({ className, children, isOpen, onClose, lazy }: Modal) {
 		}
 	}, [isOpen])
 
-
-
 	const closeHandler = useCallback(() => {
 		if (onClose) {
 			setIsClosing(true)
 			timerRef.current = setTimeout(() => {
-				setIsClosing(false)
 				onClose()
+				setIsClosing(false)
 			}, ANIMATION_DELAY)
 		}
 	}, [onClose])
@@ -52,6 +50,10 @@ export function Modal({ className, children, isOpen, onClose, lazy }: Modal) {
 		}
 	}, [closeHandler])
 
+	const contentHandler = (e: React.MouseEvent) => {
+		e.stopPropagation()
+
+	}
 	useEffect(() => {
 		if (isOpen) {
 			window.addEventListener('keydown', onKeyDown)
@@ -63,10 +65,6 @@ export function Modal({ className, children, isOpen, onClose, lazy }: Modal) {
 	}, [isOpen, onKeyDown])
 
 
-	const contentHandler = (e: React.MouseEvent) => {
-		e.stopPropagation()
-
-	}
 
 	if (lazy && !isMounted) {
 		return null

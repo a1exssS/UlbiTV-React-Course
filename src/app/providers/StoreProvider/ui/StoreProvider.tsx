@@ -3,6 +3,7 @@ import { Provider } from 'react-redux'
 import { classNames } from 'shared/lib/classNames/classNames'
 import { createReduxStore } from '../config/store'
 import { StateSchema } from '../config/StateSchema'
+import { useDispatch } from 'react-redux'
 
 interface StoreProviderProps {
 	children?: ReactNode,
@@ -10,8 +11,8 @@ interface StoreProviderProps {
 }
 
 export const StoreProvider = ({ children, initialState }: StoreProviderProps) => {
-
 	const store = createReduxStore(initialState)
+
 
 	return (
 		<Provider store={store}>
@@ -19,3 +20,7 @@ export const StoreProvider = ({ children, initialState }: StoreProviderProps) =>
 		</Provider>
 	)
 }
+
+
+
+

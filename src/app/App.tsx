@@ -6,9 +6,21 @@ import { Sidebar } from 'wigets/Sidebar/ui/Sidebar'
 import { Suspense, useState } from 'react'
 import PageLoader from 'wigets/PageLoader/ui/PageLoader'
 import { Modal } from 'shared/ui/Modal/Modal'
+import { useDispatch } from 'react-redux'
+import { useEffect } from 'react'
+import { userActions } from 'entities/User'
 
 export default function App() {
 	const { theme } = useTheme()
+
+	const dispatch = useDispatch()
+
+	useEffect(() => {
+
+		dispatch(userActions.initAuthData())
+
+	}, [dispatch])
+
 
 	return (
 		<div className={classNames('app', {}, [theme])}>
