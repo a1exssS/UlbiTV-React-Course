@@ -45,7 +45,6 @@ export function Navbar({ className }: NavbarProps) {
 				<button className={classes.button} onClick={onLogout}>
 					{t('Выйти')}
 				</button>
-				<LoginModal isOpen={isAuthModal} onClose={onCloseModal} />
 			</nav>
 		)
 	}
@@ -55,7 +54,9 @@ export function Navbar({ className }: NavbarProps) {
 			<button className={classes.button} onClick={onShowModal}>
 				{t('Войти')}
 			</button>
-			<LoginModal isOpen={isAuthModal} onClose={onCloseModal} />
+			{isAuthModal &&
+				<LoginModal isOpen={isAuthModal} onClose={onCloseModal} />
+			}
 		</nav>
 	);
 }

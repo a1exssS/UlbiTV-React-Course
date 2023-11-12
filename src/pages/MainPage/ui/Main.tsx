@@ -1,7 +1,6 @@
-import { Counter } from 'entities/Counter';
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
-import { Input } from 'shared/ui/Input/Input';
+import { Loader } from 'shared/ui/Loader/Loader';
 
 export default function Main() {
 	const { t } = useTranslation();

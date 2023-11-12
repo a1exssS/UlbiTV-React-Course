@@ -5,7 +5,6 @@ import { LangSwitcher } from 'wigets/LangSwitcher';
 import { useState } from 'react';
 import { CollapseButton } from 'wigets/CollapseButton/ui/CollapseButton';
 import { Link } from 'react-router-dom';
-import { AboutLazy } from 'pages/AboutPage/ui/About.lazy';
 type SidebarProps = {
 	className?: string;
 };

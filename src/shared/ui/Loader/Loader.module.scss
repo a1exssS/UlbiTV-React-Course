@@ -10,14 +10,15 @@
 		transform-origin: 40px 40px;
 	}
 
+
 	div:after {
 		content: " ";
 		display: block;
+		background: var(--inverted-bg-color);
 		position: absolute;
 		width: 7px;
 		height: 7px;
 		border-radius: 50%;
-		background: var(--inverted-bg-color);
 		margin: -4px 0 0 -4px;
 	}
 

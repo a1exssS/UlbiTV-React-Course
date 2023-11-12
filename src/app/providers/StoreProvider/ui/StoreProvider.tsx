@@ -1,9 +1,7 @@
-import React, { ReactNode } from 'react'
+import { ReactNode } from 'react'
 import { Provider } from 'react-redux'
-import { classNames } from 'shared/lib/classNames/classNames'
 import { createReduxStore } from '../config/store'
 import { StateSchema } from '../config/StateSchema'
-import { useDispatch } from 'react-redux'
 
 interface StoreProviderProps {
 	children?: ReactNode,
