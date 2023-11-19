@@ -1,0 +1,56 @@
+.Sidebar {
+	height: calc(100vh - var(--navbar-height));
+	width: var(--sidebar-width);
+	background: var(--inverted-bg-color);
+	position: relative;
+	transition: width 0.3s;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.switchers {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	margin-bottom: 25px;
+	gap: 10px;
+
+	button {
+		width: 32px;
+		height: 32px;
+		color: var(--inverted-primary-color);
+	}
+}
+
+.lang {
+	font-weight: 600;
+	font-size: var(--font-size-md);
+}
+
+.items {
+	margin-top: 20px;
+	margin-left: 30px;
+	display: flex;
+	flex-direction: column;
+
+}
+
+.itemCollapsed {
+	align-items: center;
+	margin-left: 0px;
+}
+
+.collapsed {
+	width: var(--sidebar-width-collapsed);
+
+	.switchers {
+		flex-direction: column;
+		align-items: center;
+	}
+
+	.lang {
+		margin-left: 0;
+	}
+}

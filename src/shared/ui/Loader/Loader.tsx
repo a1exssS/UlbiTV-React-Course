@@ -1,34 +1,15 @@
-import React from 'react'
-import { classNames } from 'shared/lib/classNames/classNames'
-import classes from "./Loader.module.scss"
+import { classNames } from 'shared/lib/classNames/classNames';
+import './Loader.scss';
 
-export function Loader() {
-	return (
-		<div className={classNames(classes.LdsRoller, {}, [])}>
-			<div>
-
-			</div>
-			<div>
-
-			</div>
-			<div>
-
-			</div>
-			<div>
-
-			</div>
-			<div>
-
-			</div>
-			<div>
-
-			</div>
-			<div>
-
-			</div>
-			<div>
-
-			</div>
-		</div>
-	)
+interface LoaderProps {
+    className?: string;
 }
+
+export const Loader = ({ className }: LoaderProps) => (
+    <div className={classNames('lds-ellipsis', {}, [className])}>
+        <div />
+        <div />
+        <div />
+        <div />
+    </div>
+);
