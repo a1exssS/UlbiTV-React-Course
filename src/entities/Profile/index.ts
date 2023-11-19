@@ -1,23 +1,24 @@
 export {
-    Profile,
-    ProfileSchema,
+	Profile,
+	ProfileSchema,
+	ValidateProfileError
 } from './model/types/profile';
 
 export {
-    profileActions,
-    profileReducer,
+	profileActions,
+	profileReducer,
 } from './model/slice/profileSlice';
 
 export {
-    fetchProfileData,
+	fetchProfileData,
 } from './model/services/fetchProfileData/fetchProfileData';
 
 export {
-    updateProfileData,
+	updateProfileData,
 } from './model/services/updateProfileData/updateProfileData';
 
 export {
-    ProfileCard,
+	ProfileCard,
 } from './ui/ProfileCard/ProfileCard';
 
 export { getProfileIsLoading } from './model/selectors/getProfileIsLoading/getProfileIsLoading';
@@ -25,3 +26,4 @@ export { getProfileData } from './model/selectors/getProfileData/getProfileData'
 export { getProfileError } from './model/selectors/getProfileError/getProfileError';
 export { getProfileReadonly } from './model/selectors/getProfileReadonly/getProfileReadonly';
 export { getProfileForm } from './model/selectors/getProfileForm/getProfileForm';
+export { getProfileValidateError } from './model/selectors/getProfileValidateError/getProfileValidateError';
