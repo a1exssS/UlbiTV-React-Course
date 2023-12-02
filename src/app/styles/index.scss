@@ -2,7 +2,6 @@
 @import "variables/global";
 @import "themes/normal";
 @import "themes/dark";
-@import "themes/purple";
 
 .app,
 .app_modal {
@@ -22,4 +21,6 @@
 .page-wrapper {
 	flex-grow: 1;
 	padding: 20px;
+	overflow-y: auto;
+	height: calc(100vh - var(--navbar-height));
 }
